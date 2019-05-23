@@ -26,20 +26,17 @@ public class NastySurprise implements MouseListener {
 		trick.setVisible(true);
 		treat.setVisible(true);
 		frame.pack();
-	}
-	void Button() {
 		trick.addMouseListener(this);
 		treat.addMouseListener(this);
 		frame.pack();
 	}
-	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		JButton pressed = (JButton) e.getSource();
-		if (pressed = this.trick) {
+		if (pressed == this.trick) {
 			showPictureFromTheInternet("https://www.craigmcginty.com/.a/6a00d8341c7e8653ef0154336b38b4970c-800wi");
 		}
-		if (pressed = this.treat) {
+		if (pressed == this.treat) {
 			showPictureFromTheInternet("https://img.ecartelera.com/noticias/fotos/34100/34113/1.jpg");
 		}
 	}
@@ -60,7 +57,13 @@ public class NastySurprise implements MouseListener {
 	}
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
+		JButton pressed = (JButton) e.getSource();
+		if (pressed == this.trick) {
+			showPictureFromTheInternet("https://www.craigmcginty.com/.a/6a00d8341c7e8653ef0154336b38b4970c-800wi");
+		}
+		if (pressed == this.treat) {
+			showPictureFromTheInternet("https://img.ecartelera.com/noticias/fotos/34100/34113/1.jpg");
+		}
 		
 	}
 private void showPictureFromTheInternet(String imageUrl) {
