@@ -1,4 +1,4 @@
-package extra;;
+package extra;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,14 +9,19 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class ChuckleClicker implements ActionListener {
+	JButton joke;
+	JButton punchline;
+
 	public static void main(String[] args) {
-		makeButtons();
+		ChuckleClicker a = new ChuckleClicker();
+		a.makeButtons();
 	}
+
 	public void makeButtons() {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
-		JButton joke = new JButton();
-		JButton punchline = new JButton();
+		joke = new JButton();
+		punchline = new JButton();
 		frame.setVisible(true);
 		frame.add(panel);
 		joke.addActionListener(this);
@@ -25,6 +30,7 @@ public class ChuckleClicker implements ActionListener {
 		panel.add(punchline);
 		frame.pack();
 	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton buttonPressed = (JButton) e.getSource();
@@ -33,7 +39,7 @@ public class ChuckleClicker implements ActionListener {
 			JOptionPane.showMessageDialog(null, "رئيس أمريكا");
 		}
 		if (e.getSource() == punchline) {
-			JOptionPane.showMessageDialog(null, "لكمة خط لكمة");	
+			JOptionPane.showMessageDialog(null, "لكمة خط لكمة");
 		}
 	}
 }
