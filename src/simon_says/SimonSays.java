@@ -45,17 +45,13 @@ public class SimonSays extends KeyAdapter {
 		// 'Simon says' otherwise press a different key"
 		JOptionPane.showMessageDialog(null, "The rule is press the matching key after it tells you to press it.");
 		// 4. Call the showImage method to show an image
-		showImage("up.jpg");
-		showImage("down.jpg");
-		showImage("left.jpg");
-		showImage("right.jpg");
+		showImage();
 	}
 
 	public void keyPressed(KeyEvent e) {
 		// 15. Make a points variable to track the score.
-		Points points = 0;
+		int points = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
-		i
 		// 17. Increase the value of score
 		points += 1;
 		// 18. Use the speak method to tell the user they were correct
@@ -72,15 +68,17 @@ public class SimonSays extends KeyAdapter {
 		// 22. Increment tries by 1
 		
 		// 25. If tries is greater than 9 (or however many you want)...
-		if
+		if (tries > 9) {
+			speak("Your got " + points + " points.");
+			System.exit(0);	
+			frame.dispose();
+			showImage();
+		}
 		// 26. Tell the user their score
-		speak("Your got " + points + " points.");
 		// 27. Exit the program
-		System.exit(0);
 		// 23. Dispose of the frame
 
 		// 24. Call the showImage method to show a new image
-		showImage(newImage.jpg);
 	}
 
 	private void showImage() {

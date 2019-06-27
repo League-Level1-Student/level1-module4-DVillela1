@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 
 public class TypingTutor implements KeyListener {
 	static char currentLetter;
+	JLabel label;
 	public void main(String[] args) {
 		JFrame frame = new JFrame();
 		frame.setVisible(true);
@@ -17,7 +18,7 @@ public class TypingTutor implements KeyListener {
 		currentLetter = generateRandomLetter();
 		
 		
-		JLabel label = new JLabel();
+		label = new JLabel();
 		label.setVisible(true);
 		label.setText("" + currentLetter);
 		label.setFont(label.getFont().deriveFont(28.0f));

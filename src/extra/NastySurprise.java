@@ -19,6 +19,10 @@ public class NastySurprise implements MouseListener {
 	static JPanel panel = new JPanel();
 	
 	public static void main(String[] args) {
+		NastySurprise a = new NastySurprise();
+		a.makeUI();
+	}
+	void makeUI() {
 		frame.add(panel);
 		panel.setVisible(true);
 		panel.add(trick);
@@ -28,7 +32,7 @@ public class NastySurprise implements MouseListener {
 		frame.pack();
 		trick.addMouseListener(this);
 		treat.addMouseListener(this);
-		frame.pack();
+		frame.pack();	
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {

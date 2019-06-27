@@ -31,7 +31,7 @@ public class BookOfIllusions extends MouseAdapter {
 		// 6. create a variable of type "JLabel" but don’t initialize it yet
 		JLabel label;
 		// 7. use the "loadImage..." methods below to initialize your JLabel
-		label = loadImageFromComputer();
+		label = loadImageFromComputer("2.jpg");
 		// 8. add your JLabel to the frame
 		frame.add(label);
 		// 9. call the pack() method on the frame
